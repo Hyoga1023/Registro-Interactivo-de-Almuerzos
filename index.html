@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Registro de Almuerzos</title>
+</head>
+<body>
+  <header>
+    <h1>Registro Interactivo de Almuerzos</h1>
+  </header>
+  <main>
+    <form id="almuerzoForm">
+      <div class="form-group">
+        <label for="fecha">Fecha:</label><br />
+        <input type="date" id="fecha" name="date" required />
+      </div>
+      
+      <div>
+        <label for="plato">Almuerzo del día</label>
+        <input type="text" id="plato" name="meal" required />
+      </div>
+      
+      <div>
+        <label for="carneSelect">Proteína</label><br />
+        <select id="carneSelect" name="Proteina" required>
+          <option value="">--Selecciona una Opción--</option>
+          <option value="Pollo">Pollo</option>
+          <option value="Res">Res</option>
+          <option value="Cerdo">Cerdo</option>
+          <option value="Pescado">Pescado</option>
+          <option value="Huevo">Huevo</option>
+          <option value="Salchicha">Salchicha</option>
+          <option value="Vegetariano">Vegetariano</option>
+          <option value="otro">Otro</option>
+        </select>
+        <input type="text" id="carneOtroInput" placeholder="Especifica otra proteína" style="display: none;" />
+      </div>
+      
+      <div class="ingredientes">
+        <label for="ingredientes">Ingredientes</label>
+        <textarea name="ingredientes" id="ingredientes" placeholder="Ingredientes separados por comas" required></textarea>
+      </div>
+      
+      <div class="buttons">
+        <button type="submit" id="saveButton">Guardar</button>
+        <button type="button" id="limpiar">Limpiar</button>
+      </div>
+    </form>
+    
+    <section id="resumen">
+      <h2>Resumen de Almuerzos</h2>
+      <div id="resumenDias"></div>
+    </section>
+    
+    <section id="graficaVariedad">
+      <h2>Uso de Carnes esta Semana</h2>
+      <canvas id="chartCarnes" height="200"></canvas>
+    </section><br>
+
+    <div id="busquedaAlmuerzos">
+  <h3>Consulta por Fecha</h3>
+  <input type="date" id="buscarFecha" />
+  <button onclick="buscarPorFecha()">Buscar</button>
+
+  <h3>Consulta por Proteína</h3>
+  <input type="text" id="buscarCarne" placeholder="Ej: Pollo, Res, Atún..." />
+  <button onclick="buscarPorCarne()">Buscar</button>
+
+  <div id="resultadosBusqueda" style="margin-top: 1rem;"></div>
+</div>
+
+    
+    <section id="graficaIngredientes">
+      <button type="button" id="borrarTodo">Borrar todos los Registros</button>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; Todos los derechos reservados. Aplicación desarrollada por Cesar Martinez</p>
+    <img src="img/logo_letra_blanca_sin_fondo.png" alt="Logo Desarrollador" />
+  </footer>
+  
+  <!-- CDN de Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script src="operatividad.js"></script>
+</body>
+</html>

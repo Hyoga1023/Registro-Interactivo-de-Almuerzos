@@ -1,0 +1,242 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --tertiary-color: #ecca9c;
+  --cuaternary-color: #e74c3c;
+  --font-family: "Arial", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-image: url("./img/Madera_Cafenegrosa.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  margin: 0;
+  padding: 0;
+  /* Añadir padding-bottom para evitar que el footer tape el contenido */
+  padding-bottom: 120px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--primary-color);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Cambiar de center a flex-start */
+  /* Remover la altura fija que causaba el problema */
+  min-height: calc(100vh - 240px); /* Usar min-height en lugar de height */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 20px;
+  gap: 10px;
+  color: var(--tertiary-color);
+  border-radius: 10px;
+  border: solid 2px var(--tertiary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+}
+
+.ingredientes {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+button {
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: var(--cuaternary-color);
+  color: var(--primary-color);
+}
+
+#resumen {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 2px var(--tertiary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#resumen h2 {
+  color: var(--tertiary-color);
+  margin-top: 0;
+  text-align: center;
+}
+
+#resumenDias {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dia {
+  background-color: rgba(236, 202, 156, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--tertiary-color);
+  color: var(--tertiary-color);
+  position: relative;
+}
+
+.dia button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--cuaternary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dia button:hover {
+  background-color: #c0392b;
+}
+
+#graficaVariedad {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 2px var(--tertiary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#graficaVariedad h2 {
+  color: var(--tertiary-color);
+  margin-top: 0;
+  text-align: center;
+}
+#busquedaAlmuerzos {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 2px var(--tertiary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: var(--tertiary-color);
+}
+
+#busquedaAlmuerzos h3 {
+  margin-bottom: 10px;
+  color: var(--tertiary-color);
+  text-align: center;
+}
+
+#busquedaAlmuerzos input[type="date"],
+#busquedaAlmuerzos input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--tertiary-color);
+  background-color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-family);
+}
+
+#busquedaAlmuerzos button {
+  width: 100%;
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#busquedaAlmuerzos button:hover {
+  background-color: var(--cuaternary-color);
+  color: var(--primary-color);
+}
+
+#resultadosBusqueda {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--tertiary-color);
+  bottom: 0;
+  width: 100%;
+  height: 130px;
+  background-color: var(--secondary-color);
+  z-index: 5;
+}
+
+footer p {
+  margin: 0;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+footer img {
+  width: 100px;
+  height: auto;
+}
