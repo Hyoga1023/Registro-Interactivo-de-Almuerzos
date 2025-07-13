@@ -52,21 +52,52 @@ main {
   margin: 0 auto;
 }
 
+/* ... Tu CSS existente para el formulario ... */
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  padding: 20px;
-  gap: 10px;
-  color: var(--tertiary-color);
-  border-radius: 10px;
-  border: solid 2px var(--tertiary-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 20px;
+    gap: 10px;
+    color: var(--tertiary-color);
+    border-radius: 10px;
+    border: solid 2px var(--tertiary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px; /* Mantén el max-width para que el formulario no sea demasiado ancho en pantallas grandes */
+}
+
+/* --- Nuevas reglas CSS para los inputs --- */
+form input[type="date"],
+form input[type="text"],
+form select,
+form textarea {
+    width: 100%; /* Esto hace que ocupen todo el ancho disponible */
+    box-sizing: border-box; /* Importante para incluir el padding y el border en el 100% del ancho */
+    padding: 8px; /* Puedes ajustar el padding a tu gusto */
+    margin-top: 5px; /* Espacio entre el label y el input, si lo necesitas */
+    border: 1px solid var(--tertiary-color); /* Un borde sutil */
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    background-color: var(--primary-color); /* Fondo semitransparente para los inputs */
+    color: var(--tertiary-color); /* Color de texto blanco/claro */
+}
+
+/* Estilo para el placeholder */
+form input::placeholder,
+form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Color del texto del placeholder */
+}
+
+/* Estilo al enfocar (focus) los inputs */
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none; /* Quita el contorno por defecto del navegador */
+    border-color: var(--primary-color); /* Cambia el color del borde al enfocar */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Una pequeña sombra al enfocar */
 }
 #vectorRainContainer {
     position: fixed;
