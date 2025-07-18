@@ -159,7 +159,7 @@ form textarea:focus {
 }
 
 .buttons2 img {
-  width: 20px;
+  width:100%;
   height: auto;
   margin-right: 5px;
 }
@@ -184,8 +184,8 @@ form textarea:focus {
 }
 
 .btn-icon {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 /* Estilos para la sección de resumen */
@@ -469,8 +469,8 @@ footer img {
   }
   
   .btn-icon {
-    width: 16px;
-    height: 16px;
+    width: 40px;
+    height: auto;
   }
   
   #resumen,
