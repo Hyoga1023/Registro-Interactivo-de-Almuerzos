@@ -4,6 +4,7 @@
   --tertiary-color: #f59bf0;
   --cuaternary-color: #e61134;
 }
+
 .love-ya-like-a-sister-regular {
   font-family: "Love Ya Like A Sister", cursive;
   font-weight: 400;
@@ -32,9 +33,11 @@ header {
   position: relative;
   z-index: 10;
 }
+
 header h1{
   color: var(--secondary-color);
 }
+
 header img {
   width: 200px;
   height: auto;
@@ -52,105 +55,115 @@ main {
   margin: 0 auto;
 }
 
-/* ... Tu CSS existente para el formulario ... */
+/* Estilos del formulario */
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    padding: 20px;
-    gap: 10px;
-    color: var(--tertiary-color);
-    border-radius: 10px;
-    border: solid 2px var(--tertiary-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 500px; /* Mantén el max-width para que el formulario no sea demasiado ancho en pantallas grandes */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 20px;
+  gap: 10px;
+  color: var(--tertiary-color);
+  border-radius: 10px;
+  border: solid 2px var(--tertiary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
 }
 
-/* --- Nuevas reglas CSS para los inputs --- */
+/* Estilos para los inputs del formulario */
 form input[type="date"],
 form input[type="text"],
 form select,
 form textarea {
-    width: 100%; /* Esto hace que ocupen todo el ancho disponible */
-    box-sizing: border-box; /* Importante para incluir el padding y el border en el 100% del ancho */
-    padding: 8px; /* Puedes ajustar el padding a tu gusto */
-    margin-top: 5px; /* Espacio entre el label y el input, si lo necesitas */
-    border: 1px solid var(--tertiary-color); /* Un borde sutil */
-    border-radius: 4px; /* Bordes ligeramente redondeados */
-    background-color: var(--primary-color); /* Fondo semitransparente para los inputs */
-    color: var(--tertiary-color); /* Color de texto blanco/claro */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
 }
 
 /* Estilo para el placeholder */
 form input::placeholder,
 form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7); /* Color del texto del placeholder */
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Estilo al enfocar (focus) los inputs */
 form input:focus,
 form select:focus,
 form textarea:focus {
-    outline: none; /* Quita el contorno por defecto del navegador */
-    border-color: var(--primary-color); /* Cambia el color del borde al enfocar */
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Una pequeña sombra al enfocar */
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
+
+/* Animaciones de vectores */
 #vectorRainContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Permite hacer clic a través del contenedor */
-    overflow: hidden; /* Asegura que los vectores no se salgan del área */
-    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
 }
 
 .vector-drop {
-    position: absolute;
-    width: 50px; /* Tamaño de tu imagen de vector */
-    height: 50px; /* Tamaño de tu imagen de vector */
-    opacity: 0; /* Inicia invisible */
-    animation: fall 3s forwards ease-out; /* Animación de caída */
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  animation: fall 3s forwards ease-out;
 }
 
 @keyframes fall {
-    0% {
-        transform: translateY(-100px) rotate(0deg);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1; /* Se vuelve visible rápidamente */
-    }
-    100% {
-        transform: translateY(120vh) rotate(720deg); /* Cae fuera de la vista */
-        opacity: 0; /* Desaparece al final */
-    }
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) rotate(720deg);
+    opacity: 0;
+  }
 }
+
+/* Estilos para ingredientes */
 .ingredientes {
   display: flex;
   flex-direction: column;
 }
+
+/* Estilos para botones principales */
 .buttons {
   display: flex;
-  justify-content: space-around ;
+  justify-content: space-around;
   margin-top: 10px;
+  gap: 10px;
 }
+
 .buttons2 {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   margin-top: 10px;
   align-items: center;
 }
+
 .buttons2 img {
   width: 20px;
   height: auto;
   margin-right: 5px;
 }
+
 .buttons button {
   display: flex;
   align-items: center;
@@ -175,7 +188,7 @@ form textarea:focus {
   height: 20px;
 }
 
-
+/* Estilos para la sección de resumen */
 #resumen {
   margin-top: 20px;
   width: 100%;
@@ -201,36 +214,70 @@ form textarea:focus {
   gap: 10px;
 }
 
+/* Estilos para las tarjetas de días (MEJORADO PARA RESPONSIVO) */
+/* Tarjeta principal */
 .dia {
-  background-color: var(--secondary-color);
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid var(--tertiary-color);
-  color: var(--primary-color);
   position: relative;
+  background: #111;
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
 }
 
-.dia button {
+/* Contenedor de acciones (botones) */
+.acciones-tarjeta {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: var(--cuaternary-color);
-  color: var(--primary-color);
-  border: none;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+/* Botones base */
+.acciones-tarjeta button {
+  all: unset;
+  background-color: #444;
+  color: white;
   font-size: 14px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.dia button:hover {
+/* Botón Editar */
+.acciones-tarjeta button[title="Editar"] {
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+}
+
+.acciones-tarjeta button[title="Editar"]:hover {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  transform: scale(1.1);
+}
+
+/* Botón Eliminar */
+.acciones-tarjeta button[title="Eliminar"] {
+  background-color: var(--cuaternary-color);
+  color: var(--primary-color);
+}
+
+.acciones-tarjeta button[title="Eliminar"]:hover {
   background-color: #c0392b;
+  transform: scale(1.1);
 }
 
+
+/* Estilos para la gráfica */
 #graficaVariedad {
   margin-top: 20px;
   width: 100%;
@@ -249,6 +296,8 @@ form textarea:focus {
   margin-top: 0;
   text-align: center;
 }
+
+/* Estilos para la búsqueda */
 #busquedaAlmuerzos {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -305,7 +354,7 @@ form textarea:focus {
   gap: 10px;
 }
 
-
+/* Estilos para el footer */
 footer {
   display: flex;
   flex-direction: column;
@@ -325,7 +374,188 @@ footer p {
   font-size: 12px;
   text-align: center;
 }
+
 footer img {
   width: 100px;
   height: auto;
+}
+
+/* =============================================== */
+/* MEDIA QUERIES PARA RESPONSIVIDAD */
+/* =============================================== */
+
+/* Tablets y pantallas medianas (768px y menos) */
+@media (max-width: 768px) {
+  header {
+    margin-top: 20px;
+  }
+  
+  header img {
+    width: 150px;
+  }
+  
+  main {
+    padding: 15px;
+  }
+  
+  form {
+    padding: 15px;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .buttons button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .acciones-tarjeta {
+    top: 8px;
+    right: 8px;
+    gap: 4px !important; /* Reducir el gap en móvil */
+    min-width: 55px !important;
+  }
+  
+  .acciones-tarjeta button {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 12px !important;
+  }
+  
+  .acciones-tarjeta button:first-child {
+    margin-right: 4px !important;
+  }
+  
+  .dia {
+    padding-right: 75px !important; /* Ajustar padding para móvil */
+    padding-top: 18px; /* Más espacio arriba para los botones */
+    min-height: 75px !important;
+  }
+}
+
+/* Móviles y pantallas pequeñas (480px y menos) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  header img {
+    width: 120px;
+  }
+  
+  main {
+    padding: 10px;
+  }
+  
+  form {
+    padding: 12px;
+    gap: 8px;
+  }
+  
+  form input[type="date"],
+  form input[type="text"],
+  form select,
+  form textarea {
+    padding: 6px;
+    font-size: 14px;
+  }
+  
+  .buttons button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .btn-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  #resumen,
+  #graficaVariedad,
+  #busquedaAlmuerzos {
+    padding: 15px;
+  }
+  
+  .acciones-tarjeta {
+    top: 5px !important;
+    right: 5px !important;
+    gap: 3px !important;
+    min-width: 50px !important;
+  }
+  
+  .acciones-tarjeta button {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 11px !important;
+  }
+  
+  .acciones-tarjeta button:first-child {
+    margin-right: 3px !important;
+  }
+  
+  .dia {
+    padding: 12px;
+    padding-right: 65px !important;
+    padding-top: 20px;
+    font-size: 14px;
+    min-height: 80px !important;
+  }
+  
+  footer {
+    height: 100px;
+  }
+  
+  footer img {
+    width: 80px;
+  }
+  
+  footer p {
+    font-size: 10px;
+  }
+}
+
+/* Pantallas muy pequeñas (320px y menos) */
+@media (max-width: 320px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+  
+  header img {
+    width: 100px;
+  }
+  
+  main {
+    padding: 5px;
+  }
+  
+  form {
+    padding: 10px;
+  }
+  
+  .acciones-tarjeta {
+    top: 3px !important;
+    right: 3px !important;
+    gap: 2px !important;
+    min-width: 45px !important;
+  }
+  
+  .acciones-tarjeta button {
+    width: 24px !important;  /* Subido de 20px para que no se aplasten tanto */
+    height: 24px !important;
+    font-size: 10px !important;
+  }
+  
+  .acciones-tarjeta button:first-child {
+    margin-right: 2px !important;
+  }
+  
+  .dia {
+    padding: 10px;
+    padding-right: 60px !important;
+    padding-top: 22px;
+    min-height: 85px !important;
+  }
 }
