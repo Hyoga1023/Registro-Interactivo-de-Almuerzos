@@ -182,9 +182,9 @@ function renderChart(data) {
       datasets: [{
         label: 'Uso de carne esta semana',
         data: values,
-        backgroundColor: '#3498db',
+        backgroundColor: '#b244e6ff',
         borderRadius: 5,
-        hoverBackgroundColor: '#2980b9'
+        hoverBackgroundColor: '#ea76eeff'
       }]
     },
     options: {
