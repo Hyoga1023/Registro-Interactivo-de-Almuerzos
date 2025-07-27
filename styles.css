@@ -312,9 +312,14 @@ form textarea:focus {
   gap: 10px;
   margin-bottom: 20px;
 }
-
+#consultaIA{
+  text-align: center;
+  color: var(--secondary-color);
+  font-family: "Love Ya Like A Sister", cursive;
+  margin-bottom: 15px;
+}
 #preguntaIA {
-  width: 100%;
+  width: 100%;  
   padding: 15px;
   border: 2px solid #ff69b4;
   border-radius: 10px;
