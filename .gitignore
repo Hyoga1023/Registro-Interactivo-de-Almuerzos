@@ -1,0 +1,17 @@
+# API Keys y configuraciones sensibles
+config.js
+.env*
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Node (si usas más adelante)
+node_modules/

@@ -83,43 +83,48 @@
         <canvas id="chartCarnes" height="200"></canvas>
       </section>
       <br />
-      <div id="busquedaAlmuerzos">
-        <h3>Consulta por Fecha</h3>
-        <input type="date" id="buscarFecha" />
-        <button class="buttons2" onclick="buscarPorFecha()">
-          <img
-            src="img/Chococat.png"
-            alt="Buscar"
-            style="
-              width: 30px;
-              height: auto;
-              vertical-align: middle;
-              margin-right: 5px;
-            "
-          />
-          Buscar
-        </button>
-        <h3>Consulta por Proteína</h3>
-        <input
-          type="text"
-          id="buscarCarne"
-          placeholder="Ej: Pollo, Res, Atún..."
-        />
-        <button class="buttons2" onclick="buscarPorCarne()">
-          <img
-            src="img/Keroppi.png"
-            alt="Buscar Proteína"
-            style="
-              width: 30px;
-              height: auto;
-              vertical-align: middle;
-              margin-right: 5px;
-            "
-          />
-          Buscar
-        </button>
-        <div id="resultadosBusqueda" style="margin-top: 1rem"></div>
+      
+      <!-- Nueva sección de IA -->
+      <div id="consultaIA">
+        <h3>🤖 Consulta Almuerzos y sugerencia de recetas con IA</h3>
+        <div class="ia-container">
+          <div class="chat-input-container">
+            <textarea
+              id="preguntaIA"
+              placeholder="Pregúntame cualquier cosa sobre tus almuerzos... ¿Qué has comido más esta semana? ¿Necesitas ideas para mañana?"
+              rows="3"
+            ></textarea>
+            <button id="consultarIA" class="buttons2">
+              <img
+                src="img/vectores.png"
+                alt="Consultar IA"
+                style="
+                  width: 30px;
+                  height: auto;
+                  vertical-align: middle;
+                  margin-right: 5px;
+                "
+              />
+              Preguntar a la IA
+            </button>
+          </div>
+          <div id="respuestaIA" class="ia-response">
+            <div class="ia-welcome">
+              ¡Hola! Soy tu asistente inteligente de almuerzos 🍽️<br>
+              Puedes preguntarme cualquier cosa sobre tus almuerzos o pedirme recetas
+            </div>
+          </div>
+          <div id="loadingIA" class="loading-ia" style="display: none;">
+            <div class="loading-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            Pensando...
+          </div>
+        </div>
       </div>
+
       <section class="buttons" id="graficaIngredientes">
         <button type="button" id="borrarTodo">
           Borrar todos los Registros
@@ -136,7 +141,8 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script src="operatividad.js"></script>
+    <script src="ia-assistant.js"></script>
     <div id="vectorRainContainer"></div>
-<script src="vectores.js"></script> 
-</body>
+    <script src="vectores.js"></script> 
+  </body>
 </html>
