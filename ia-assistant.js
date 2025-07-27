@@ -358,6 +358,3 @@ document.addEventListener('DOMContentLoaded', () => {
     window.configureIAKey = () => window.iaAssistant.configureApiKey();
     window.clearIAKey = () => window.iaAssistant.clearApiKey();
 });
-
-
-document.head.insertAdjacentHTML('beforeend', iaStyles);
