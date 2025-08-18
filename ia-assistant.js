@@ -99,7 +99,7 @@ class IAAssistant {
         const fechaActual = new Date().toLocaleDateString('es-ES');
         
         let contexto = `Eres un asistente inteligente especializado en análisis de almuerzos y nutrición. `;
-        contexto += `El usuario es Cesar Martinez y tiene registrados ${almuerzos.length} almuerzos. `;
+        contexto += `El usuario es Andrea Vasquez y tiene registrados ${almuerzos.length} almuerzos. `;
         contexto += `Fecha actual: ${fechaActual}. `;
         
         if (almuerzos.length > 0) {
